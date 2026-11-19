@@ -221,3 +221,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Lição 02 · ficheiros gerados pelos notebooks
+data/titanic3.csv
+data/ag-data.zip
+models/
