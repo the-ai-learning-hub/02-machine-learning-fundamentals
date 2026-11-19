@@ -28,15 +28,6 @@ def data_dir() -> Path:
     return find_root() / "data"
 
 
-def assets_dir(*parts: str) -> Path:
-    """Folder for figures shared between the notebooks and the deck (created if missing)."""
-    folder = find_root() / "assets"
-    for part in parts:
-        folder = folder / part
-    folder.mkdir(parents=True, exist_ok=True)
-    return folder
-
-
 def models_dir() -> Path:
     """Folder where notebooks save trained pipelines (git-ignored)."""
     folder = find_root() / "models"

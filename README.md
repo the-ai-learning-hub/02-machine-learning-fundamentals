@@ -33,11 +33,11 @@ flowchart LR
 
 | Sessão | Bloco | Slides | Prática |
 |---|---|---|---|
-| 1 | Abertura: o que é ML, história, as 4 famílias | 15 min | — |
-| 1 | CRISP-DM: as seis fases e o ciclo | 15 min | — |
-| 1 | Preparação de dados: tipos, *missing values*, *encoding*, *scaling*, validação, *leakage* | 25 min | — |
-| 1 | Aprendizagem supervisionada: modelos lineares, árvores, *ensembles*, viés-variância | 30 min | Notebook 01 · 45 min |
-| 1 | Métricas: MAE/RMSE/R², matriz de confusão, ROC/PR, *threshold* | 20 min | Notebook 02 · 45 min |
+| 1 | Abertura: o que é ML, história, as 3 famílias | 15 min | — |
+| 1 | CRISP-DM: as seis fases e o ciclo | 10 min | — |
+| 1 | Preparação de dados: tipos, valores em falta e imputação, *outliers*, *encoding*, escala, validação, *leakage* | 30 min | — |
+| 1 | Aprendizagem supervisionada: os dados, métricas de regressão e classificação, *threshold* | 25 min | Notebook 01 · 45 min |
+| 1 | Modelos supervisionados: linear, Ridge, logística, árvores, *ensembles*, desequilíbrio, viés-variância | 25 min | Notebook 02 · 45 min |
 | 2 | Não supervisionada: K-Means, DBSCAN, PCA | 20 min | Notebook 03 · 25 min |
 | 2 | Redes neuronais: neurónio, XOR, *backprop*, PyTorch · CPU vs GPU | 40 min | Notebook 04 · 30 min |
 | 2 | Reinforcement learning: MDP, Q-learning, *reward hacking* | 25 min | Notebook 05 · 30 min |
@@ -88,7 +88,6 @@ Cada notebook corre do início ao fim em menos de um minuto num portátil (tempo
 ├── README.md · LICENSE · .gitignore · .nojekyll
 ├── pyproject.toml · uv.lock      ← dependências (uv) de todos os notebooks
 ├── data/
-│   ├── (ag-data.zip, titanic3.csv) ← descarregados das fontes oficiais no 1.º uso
 │   └── DATA_DICTIONARY.md        ← fontes, licenças e variáveis
 ├── src/                          ← código partilhado pelos notebooks
 │   ├── paths.py · data.py        ← encontrar a raiz e carregar os dados
@@ -99,7 +98,6 @@ Cada notebook corre do início ao fim em menos de um minuto num portátil (tempo
 │   ├── benchmark.py              ← benchmark CPU vs GPU (PyTorch)
 │   ├── rl_utils.py               ← gridworld e Q-learning
 │   └── tests/                    ← testes mínimos (pytest)
-├── assets/                       ← figuras e GIFs usados pelos notebooks
 ├── 01_supervised_learning/       ← notebooks 01 (casas) e 02 (Titanic)
 ├── 02_unsupervised_learning/     ← notebook 03
 ├── 03_neural_networks/           ← notebook 04
@@ -137,7 +135,7 @@ uv run python -m http.server 8000      # servir os slides em http://localhost:80
 
 ## Dados
 
-Ver [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md). Os dados **não estão no repositório**: o código descarrega-os das **fontes oficiais** no primeiro uso — as casas de Windsor (1987) do arquivo do *Journal of Applied Econometrics* (Anglin & Gençay, 1996) e o Titanic (`titanic3`) da Vanderbilt University (Harrell & Cason) — e guarda uma cópia local em `data/`.
+Ver [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md). Os dados **não estão no repositório**: o código descarrega-os das **fontes oficiais** sempre que um notebook corre — as casas de Windsor (1987) do arquivo do *Journal of Applied Econometrics* (Anglin & Gençay, 1996) e o Titanic (`titanic3`) da Vanderbilt University (Harrell & Cason) — diretamente para a memória: nenhum ficheiro de dados fica no projeto.
 
 ## Para saber mais
 

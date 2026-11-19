@@ -25,4 +25,4 @@ pandas e gráficos ([Lição 01](https://github.com/the-ai-learning-hub/01-pytho
 
 ## Dados
 
-[Casas de Windsor, 1987](../data/DATA_DICTIONARY.md#1-preços-de-casas-em-windsor-canadá) (arquivo oficial do *Journal of Applied Econometrics*) e [Titanic `titanic3`](../data/DATA_DICTIONARY.md#2-titanic-titanic3) (Vanderbilt University). Ambos são descarregados das fontes oficiais no primeiro uso.
+[Casas de Windsor, 1987](../data/DATA_DICTIONARY.md#1-preços-de-casas-em-windsor-canadá) (arquivo oficial do *Journal of Applied Econometrics*) e [Titanic `titanic3`](../data/DATA_DICTIONARY.md#2-titanic-titanic3) (Vanderbilt University). O código descarrega ambos diretamente das fontes oficiais (nenhum ficheiro de dados fica no projeto).

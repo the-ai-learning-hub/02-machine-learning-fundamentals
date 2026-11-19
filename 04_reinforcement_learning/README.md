@@ -18,4 +18,3 @@ Um agente aprende a atravessar um labirinto com lava **só com recompensas**, se
 
 Python e NumPy (Lição 01) e os slides da secção Reinforcement learning. Corre em CPU em menos de um minuto.
 
-Figuras e animações do projeto: [`assets/rl/`](../assets/rl/).
